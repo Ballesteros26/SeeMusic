@@ -1,0 +1,11 @@
+namespace MidiPlayerTK
+{
+	public enum EnumSampleType
+	{
+		FLUID_SAMPLETYPE_MONO = 1,
+		FLUID_SAMPLETYPE_RIGHT = 2,
+		FLUID_SAMPLETYPE_LEFT = 4,
+		FLUID_SAMPLETYPE_LINKED = 8,
+		FLUID_SAMPLETYPE_ROM = 0x8000
+	}
+}

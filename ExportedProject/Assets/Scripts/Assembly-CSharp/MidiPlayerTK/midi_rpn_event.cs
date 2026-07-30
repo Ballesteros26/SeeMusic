@@ -1,0 +1,12 @@
+namespace MidiPlayerTK
+{
+	public enum midi_rpn_event
+	{
+		RPN_PITCH_BEND_RANGE = 0,
+		RPN_CHANNEL_FINE_TUNE = 1,
+		RPN_CHANNEL_COARSE_TUNE = 2,
+		RPN_TUNING_PROGRAM_CHANGE = 3,
+		RPN_TUNING_BANK_SELECT = 4,
+		RPN_MODULATION_DEPTH_RANGE = 5
+	}
+}

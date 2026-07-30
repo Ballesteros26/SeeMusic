@@ -1,0 +1,7 @@
+public enum OGOKDDMBJOP
+{
+	None = 0,
+	Personal = 10,
+	Plus = 20,
+	Pro = 30
+}
