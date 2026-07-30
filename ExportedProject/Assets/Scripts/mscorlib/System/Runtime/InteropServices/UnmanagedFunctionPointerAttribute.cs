@@ -1,0 +1,16 @@
+namespace System.Runtime.InteropServices
+{
+	/// <summary>Controls the marshaling behavior of a delegate signature passed as an unmanaged function pointer to or from unmanaged code. This class cannot be inherited. </summary>
+	[ComVisible(true)]
+	[AttributeUsage(AttributeTargets.Delegate, AllowMultiple = false, Inherited = false)]
+	public sealed class UnmanagedFunctionPointerAttribute : Attribute
+	{
+		private CallingConvention m_callingConvention;
+
+		/// <summary>Initializes a new instance of the <see cref="T:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute" /> class with the specified calling convention. </summary>
+		/// <param name="callingConvention">The specified calling convention.</param>
+		public UnmanagedFunctionPointerAttribute(CallingConvention callingConvention)
+		{
+		}
+	}
+}

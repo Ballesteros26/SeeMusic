@@ -1,0 +1,12 @@
+using System;
+
+namespace NJsonSchema.Annotations
+{
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Property | AttributeTargets.Parameter | AttributeTargets.ReturnValue, AllowMultiple = false)]
+	public class JsonSchemaTypeAttribute : Attribute
+	{
+		public Type Type { get; }
+
+		public bool? IsNullableRaw { get; }
+	}
+}

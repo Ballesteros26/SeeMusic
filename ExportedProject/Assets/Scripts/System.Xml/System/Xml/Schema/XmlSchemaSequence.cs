@@ -1,0 +1,30 @@
+using System.Xml.Serialization;
+
+namespace System.Xml.Schema
+{
+	/// <summary>Represents the sequence element (compositor) from the XML Schema as specified by the World Wide Web Consortium (W3C). The sequence requires the elements in the group to appear in the specified sequence within the containing element.</summary>
+	public class XmlSchemaSequence : XmlSchemaGroupBase
+	{
+		private XmlSchemaObjectCollection items;
+
+		/// <summary>The elements contained within the compositor. Collection of <see cref="T:System.Xml.Schema.XmlSchemaElement" />, <see cref="T:System.Xml.Schema.XmlSchemaGroupRef" />, <see cref="T:System.Xml.Schema.XmlSchemaChoice" />, <see cref="T:System.Xml.Schema.XmlSchemaSequence" />, or <see cref="T:System.Xml.Schema.XmlSchemaAny" />.</summary>
+		/// <returns>The elements contained within the compositor.</returns>
+		[XmlElement("group", typeof(XmlSchemaGroupRef))]
+		[XmlElement("any", typeof(XmlSchemaAny))]
+		[XmlElement("sequence", typeof(XmlSchemaSequence))]
+		[XmlElement("choice", typeof(XmlSchemaChoice))]
+		[XmlElement("element", typeof(XmlSchemaElement))]
+		public override XmlSchemaObjectCollection Items => null;
+
+		internal override bool IsEmpty => false;
+
+		internal override void SetItems(XmlSchemaObjectCollection newItems)
+		{
+		}
+
+		/// <summary>Initializes a new instance of the <see cref="T:System.Xml.Schema.XmlSchemaSequence" /> class.</summary>
+		public XmlSchemaSequence()
+		{
+		}
+	}
+}
